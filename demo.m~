@@ -1,0 +1,17 @@
+pepper = imread('peppers.png');
+pepper_BW = im2bw(pepper);
+pepper_BW = pepper_BW(1:384,1:384);
+figure, imshow(pepper_BW)
+pixel_number = 26;
+pixel_unit = 5;
+x0 = 192;
+y0
+x_translation_0
+y_translation_0
+magnification
+rotation
+RGB
+output = camera_points(26,5,192,192,0,0,1,0,pepper_BW);
+% figure, imshow(output_1)
+% imshow(pepper_BW)
+% output_1 = camera_points(26,5,192,192,0,0,1,0,pepper_BW);
