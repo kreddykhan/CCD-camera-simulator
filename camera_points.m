@@ -25,18 +25,6 @@ y3 = y-difference;
 x4 = x+difference;
 y4 = y+difference;
 
-% x1 = x-difference
-% y1 = y-difference
-% 
-% x2 = x+difference
-% y2 = y-difference
-% 
-% x3 = x-difference
-% y3 = y+difference
-% 
-% x4 = x+difference
-% y4 = y+difference
-
 thing = [x1 y1 x2 y2 x3 y3 x4 y4];
 
 theta = deg2rad(rotation);
@@ -90,17 +78,6 @@ x_value_max = max(max(x11,x21),max(x31,x41));
 y_value_min = min(min(y11,y21),min(y31,y41));
 y_value_max = max(max(y11,y21),max(y31,y41));
 
-% % figure,imshow(RGB(y_value_min:y_value_max,x_value_min:x_value_max));
-
-% y11 = x1 - correction;
-% x11 = y1 - correction;
-% y21 = x2 - correction;
-% x21 = y2 - correction;
-% y31 = x3 - correction;
-% x31 = y3 - correction;
-% y41 = x4 - correction;
-% x41 = y4 - correction;
-
 x11 = temp1(1) - correction;
 y11 = temp1(2) - correction;
 x21 = temp2(1) - correction;
@@ -109,17 +86,6 @@ x31 = temp3(1) - correction;
 y31 = temp3(2) - correction;
 x41 = temp4(1) - correction;
 y41 = temp4(2) - correction;
-
-% % thing = cat(1,thing,[x11 y11 x21 y21 x31 y31 x41 y41])
-
-% y11 = temp1(1) - correction;
-% x11 = temp1(2) - correction;
-% y21 = temp2(1) - correction;
-% x21 = temp2(2) - correction;
-% y31 = temp3(1) - correction;
-% x31 = temp3(2) - correction;
-% y41 = temp4(1) - correction;
-% x41 = temp4(2) - correction;
 
 x1 = x11;
 y1 = y11;

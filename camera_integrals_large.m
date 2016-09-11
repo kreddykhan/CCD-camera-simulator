@@ -1,54 +1,11 @@
 function intensity = camera_integrals_large(x1,y1,x2,y2,x3,y3,x4,y4,RGB,pixel_number,rotation)
 tic
-% RGB = RGB;
 magnification = 1;
 pixels_number = (pixel_number)*magnification;
 correction = floor(length(RGB)/2);
 
 locations = ones(pixels_number,pixels_number*2);
 intensity = ones(pixels_number-1,pixels_number-1);
-
-% x1 = 100;
-% y1 = 100;
-% 
-% x2 = 7600;
-% y2 = 100;
-% 
-% x3 = 100;
-% y3 = 7600;
-% 
-% x4 = 7600;
-% y4 = 7600;
-
-% y11 = x1 - correction;
-% x11 = y1 - correction;
-% y21 = x2 - correction;
-% x21 = y2 - correction;
-% y31 = x3 - correction;
-% x31 = y3 - correction;
-% y41 = x4 - correction;
-% x41 = y4 - correction;
-% % 
-% x1 = x11;
-% y1 = y11;
-% x2 = x21;
-% y2 = y21;
-% x3 = x31;
-% y3 = y31;
-% x4 = x41;
-% y4 = y41;
-
-% x1 = 2;
-% y1 = 6;
-% 
-% x2 = 1;
-% y2 = 2;
-% 
-% x3 = 7;
-% y3 = 7;
-% 
-% x4 = 8;
-% y4 = 1;
 
 %%
 left_line = [x1 y1; x2 y2];

@@ -1,22 +1,9 @@
 function intensity = camera_integrals(x1,y1,x2,y2,x3,y3,x4,y4,RGB)
-% RGB = RGB;
-% 
-% x1 = 100;
-% y1 = 200;
-% 
-% x2 = 100;
-% y2 = 200;
-% 
-% x3 = 200;
-% y3 = 100;
-% 
-% x4 = 200;
-% y4 = 200;
 
-thing = [x1,x2,x3,x4,y1,y2,y3,y4];
+thing = [x1,x2,x3,x4,y1,y2,y3,y4]; % Simply used to check the coordinates sent in
 assignin('base','thing',thing);
 
-pixel_bins = 49;
+pixel_bins = 49; % Essentially the number of Riemann sums taken
 
 left_line = [x1 y1; x2 y2];
 left_line_length = pdist(left_line);
@@ -36,7 +23,6 @@ right_line_points(1,2) = y3;
 if x1~=x2
     left_slope = (y1 - y2)/(x1-x2);
     left_line_angle = atan(left_slope);
-%     left_line_angle = rad2deg(left_line_angle);
 else
     left_slope = 1;
     left_line_angle = deg2rad(90);
@@ -45,7 +31,6 @@ end
 if x3~=x4
     right_slope = (y3 - y4)/(x3-x4);
     right_line_angle = atan(right_slope);
-%     right_line_angle = rad2deg(right_line_angle);
 else
     right_slope = 1;
     right_line_angle = deg2rad(90);
