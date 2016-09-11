@@ -25,7 +25,7 @@ The code uses a baseline image and takes the following parameters:
 - `rotation`: Rotation relative to the center axes (`x0`, `y0`).
 - `RGB`: The background of the "photo".
 
-The code initially uses the `camera_points.m` file to take the inputted parameters and determines the four corners of the photo relative to the background. This is determined using the `pixel_number` and `pixel_unit` and the units of the pixels of `RGB`. `RGB` is assumed to be 1 micron per pixel in the demo. **This needs to be updated to allow user inputs**
+The code initially uses the `camera_points.m` file to take the inputted parameters and determines the four corners of the photo relative to the background. This is determined using the `pixel_number` and `pixel_unit` and the units of the pixels of `RGB`. `RGB` is assumed to be 1 micron per pixel in the demo. **This will be updated to allow user inputs for this value**
 
 Having determined the corners, the code then uses the `camera_integrals_large.m` file to find the slope of the lines of the tapezoid formed by the four corners. The slopes of these lines are used to partition the trapezoid into smaller trapezoids based on the inputted `pixel_number` and `magnification`. This technique is called pixel bining. The technique essentially smears the original pixels into one pixel for the region defined by the bin and this is what the photo prints.
 
